@@ -1,0 +1,38 @@
+spring:
+  mail:
+    port: 465
+    host: smtp.mail.ru
+    username: merdeliyev@inbox.ru
+    password: 12345
+    protocol: smtp
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+          ssl:
+            enable: true
+        debug: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: admin
+    url: jdbc:postgresql://localhost:5433/iq_info_v1
+  application:
+    name: iq-information-v1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  cache:
+    disabled: true
+  #packages-to-scan:
+  #paths-to-match: /api/auth/**
