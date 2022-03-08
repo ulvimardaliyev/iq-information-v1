@@ -34,5 +34,6 @@ springdoc:
     path: /swagger-ui.html
   cache:
     disabled: true
-  #packages-to-scan:
-  #paths-to-match: /api/auth/**
+  packages-to-scan: az.iq.information.v1.controller
+  api-docs:
+    enabled: true
